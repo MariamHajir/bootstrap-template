@@ -73,6 +73,7 @@ function validatePhoneNumber(phoneNumber) {
         phoneNumberError.textContent = "";
     }
 }
+
 function validateMessage(message) {
     if (message.length < 100) {
         messageError.style.backgroundColor = "red";
