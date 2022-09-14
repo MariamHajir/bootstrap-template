@@ -82,3 +82,42 @@ function validateMessage(message) {
         messageError.textContent = "";
     }
 }
+
+//  API FUNCTION HERE 
+function sendForm(full_name, email, phone_number, message) {
+    let api = 'http://127.0.0.1/contact-db/messages.php';
+    let settings = {
+      method: 'POST',
+      body: new URLSearchParams({
+        full_name,
+        email,
+        phone_number, 
+        message
+      })
+    }
+    fetch(api, settings)
+      .then(response => response.json())
+      .then(data => {
+        formResult.textContent = data.message;
+        if (data.status == 200) {
+          formResult.dataset.role = "success";
+          setTimeout(() => { 
+            formResult.textContent = "";
+            formResult.dataset.role = "";
+          }, 3000)
+        } else {
+          formResult.dataset.role = "error";
+          setTimeout(() => { 
+            formResult.textContent = "";
+            formResult.dataset.role = "";
+          }, 3000)
+        } 
+      });
+  }
+  
+  function removeError(input, errorField) {
+    if (input.classList.contains("error")) {
+      input.classList.remove("error");
+    }
+    errorField.textContent = "";
+  }
