@@ -43,6 +43,7 @@ function validateInputs() {
     }
 }
 
+
 //Checking for a validate Requirements
 function validateName(name) {
     if (name.length < 5) {
@@ -83,6 +84,7 @@ function validateMessage(message) {
         messageError.textContent = "";
     }
 }
+
 
 //  API FUNCTION HERE 
 function sendForm(full_name, email, phone_number, message) {
