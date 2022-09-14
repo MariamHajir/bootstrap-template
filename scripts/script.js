@@ -8,6 +8,7 @@ const nameError = document.getElementById("name-error");
 const emailError = document.getElementById("email-error");
 const phoneNumberError = document.getElementById("phone-number-error");
 const messageError = document.getElementById("message-error");
+
 sendBtn.addEventListener("click", validateInputs);
 
 //function checking inputs
