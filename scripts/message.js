@@ -1,5 +1,4 @@
 const tbody = document.querySelector('tbody');
-
 const url = "./CONTACT-DB/getmessages.php";
 
 fetch(url)
