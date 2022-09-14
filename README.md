@@ -1,1 +1,1 @@
-Random Template using HTML, CSS AND JavaScript.
+Random Template using HTML, CSS, JavaScript and PHP for a Submit Function.
